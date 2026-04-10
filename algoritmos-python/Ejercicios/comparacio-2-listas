@@ -1,0 +1,23 @@
+# EJERCICIO 4.5 - COMPARACIÓN DE DOS LISTAS
+
+print("\n=== EJERCICIO 4.5: COMPARACIÓN DE LISTAS ===\n")
+
+# Entrada con limpieza
+lista1 = [x.strip() for x in input("Ingrese la primera lista: ").split(",") if x.strip()]
+lista2 = [x.strip() for x in input("Ingrese la segunda lista: ").split(",") if x.strip()]
+
+# Convertir a sets para evitar duplicados y facilitar operaciones
+set1 = set(lista1)
+set2 = set(lista2)
+
+# Procesos
+comunes = list(set1 & set2)
+unicos1 = list(set1 - set2)
+unicos2 = list(set2 - set1)
+
+# Salida
+print("\n" + "=" * 50)
+print(f"Elementos comunes: {comunes}")
+print(f"Únicos en lista 1: {unicos1}")
+print(f"Únicos en lista 2: {unicos2}")
+print("=" * 50)
