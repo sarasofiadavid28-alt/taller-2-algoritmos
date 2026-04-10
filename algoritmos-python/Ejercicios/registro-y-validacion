@@ -1,0 +1,32 @@
+# EJERCICIO 1.1 - REGISTRO DE USUARIO CON VALIDACIÓN DE EDAD
+
+print("\n=== EJERCICIO 1.1: REGISTRO DE USUARIO ===\n")
+
+# Entrada de datos
+nombre = input("Ingresa tu nombre: ").strip()
+
+# Validación de edad
+while True:
+    try:
+        edad = int(input("Ingresa tu edad: ").strip())
+
+        if edad <= 0:
+            print("Error: La edad debe ser un número mayor que cero.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Error: Debes ingresar solo números para la edad.")
+
+# Entrada adicional
+ciudad = input("Ingresa tu ciudad de residencia: ").strip()
+
+# Salida
+print("\n" + "=" * 50)
+print("DATOS REGISTRADOS")
+print("=" * 50)
+print(f"Nombre : {nombre}")
+print(f"Edad   : {edad} años")
+print(f"Ciudad : {ciudad}")
+print("=" * 50)
