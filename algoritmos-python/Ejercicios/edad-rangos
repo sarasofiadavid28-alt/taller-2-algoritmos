@@ -1,0 +1,33 @@
+# EJERCICIO 6 - CLASIFICACIÓN DE EDAD POR RANGOS
+
+print("\n=== EJERCICIO 6: CLASIFICADOR DE EDADES ===\n")
+
+# Entrada con validación
+while True:
+    try:
+        edad = int(input("Ingresa tu edad: ").strip())
+
+        if edad < 0:
+            print("Error: La edad no puede ser negativa.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Error: Debes ingresar un número válido.")
+
+# Proceso
+if 0 <= edad <= 12:
+    categoria = "Niño"
+elif 13 <= edad <= 17:
+    categoria = "Adolescente"
+elif 18 <= edad <= 64:
+    categoria = "Adulto"
+else:
+    categoria = "Adulto mayor"
+
+# Salida
+print("\n" + "=" * 50)
+print(f"Edad ingresada: {edad}")
+print(f"Clasificación : {categoria}")
+print("=" * 50)
