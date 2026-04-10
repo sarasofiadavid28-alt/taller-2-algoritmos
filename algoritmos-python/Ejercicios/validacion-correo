@@ -1,0 +1,38 @@
+# EJERCICIO 3 - VALIDACIÓN BÁSICA DE CORREO ELECTRÓNICO
+
+print("\n=== EJERCICIO 3: VALIDACIÓN DE CORREO ===\n")
+
+# Entrada
+correo = input("Ingresa tu correo electrónico: ").strip()
+
+errores = []
+
+# Validaciones
+if "@" not in correo:
+    errores.append("Falta el símbolo '@'")
+
+if correo.count("@") != 1:
+    errores.append("Debe haber exactamente un '@'")
+
+if "." not in correo:
+    errores.append("Falta el punto (.)")
+
+if "@" in correo:
+    parte_despues_arroba = correo.split("@")[1]
+    if "." not in parte_despues_arroba:
+        errores.append("Debe haber al menos un punto después del '@'")
+
+if correo.startswith(("@", ".")) or correo.endswith(("@", ".")):
+    errores.append("El correo no puede empezar ni terminar con '@' o '.'")
+
+# Salida
+print("\n" + "=" * 50)
+
+if not errores:
+    print("Correo válido:", correo)
+else:
+    print("El correo presenta los siguientes errores:")
+    for error in errores:
+        print(f"- {error}")
+
+print("=" * 50)
