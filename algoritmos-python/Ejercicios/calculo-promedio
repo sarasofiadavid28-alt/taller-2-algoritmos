@@ -1,0 +1,39 @@
+# EJERCICIO 5.2 - CÁLCULO DE PROMEDIO CON FUNCIÓN
+
+print("\n=== EJERCICIO 5.2: PROMEDIO DE NÚMEROS ===\n")
+
+def calcular_promedio(lista):
+    if not lista:
+        return None
+    return sum(lista) / len(lista)
+
+
+# Entrada
+entrada = input("Ingrese números separados por comas: ")
+
+numeros = []
+errores = []
+
+for i, n in enumerate(entrada.split(",")):
+    try:
+        numeros.append(float(n.strip()))
+    except ValueError:
+        errores.append(f"Posición {i+1}: '{n}' no es válido")
+
+# Mostrar errores
+if errores:
+    print("\nSe encontraron errores:")
+    for e in errores:
+        print(f"- {e}")
+
+# Proceso y salida
+resultado = calcular_promedio(numeros)
+
+print("\n" + "=" * 50)
+
+if resultado is None:
+    print("No se puede calcular el promedio (lista vacía).")
+else:
+    print(f"Promedio: {resultado:.2f}")
+
+print("=" * 50)
