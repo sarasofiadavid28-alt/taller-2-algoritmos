@@ -1,0 +1,34 @@
+# EJERCICIO 5.4 - VERIFICACIÓN DE PALÍNDROMO
+
+import string
+
+print("\n=== EJERCICIO 5.4: PALÍNDROMO ===\n")
+
+def es_palindromo(texto):
+    # Normalizar texto
+    texto = texto.lower()
+    
+    # Filtrar solo letras y números
+    texto_limpio = "".join(
+        c for c in texto if c.isalnum()
+    )
+
+    # Comparar con su inverso
+    return texto_limpio == texto_limpio[::-1]
+
+
+# Entrada
+frase = input("Ingrese un texto: ").strip()
+
+print("\n" + "=" * 50)
+
+# Validación
+if not frase:
+    print("Error: No se ingresó texto.")
+else:
+    if es_palindromo(frase):
+        print("El texto ES un palíndromo.")
+    else:
+        print("El texto NO es un palíndromo.")
+
+print("=" * 50)
