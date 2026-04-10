@@ -1,0 +1,36 @@
+# EJERCICIO 2 - CALCULADORA BÁSICA CON VALIDACIÓN
+
+print("\n=== EJERCICIO 2: CALCULADORA BÁSICA ===\n")
+print("Operaciones disponibles: +  -  *  /\n")
+
+try:
+    # Entradas
+    num1 = float(input("Primer número: "))
+    operacion = input("Operación (+, -, *, /): ").strip()
+    num2 = float(input("Segundo número: "))
+
+    # Proceso
+    if operacion == "+":
+        resultado = num1 + num2
+
+    elif operacion == "-":
+        resultado = num1 - num2
+
+    elif operacion == "*":
+        resultado = num1 * num2
+
+    elif operacion == "/":
+        if num2 == 0:
+            print("\nError: No se puede dividir entre cero.")
+            exit()
+        resultado = num1 / num2
+
+    else:
+        print("\nError: Operación no válida.")
+        exit()
+
+    # Salida
+    print(f"\nResultado: {resultado:.2f}")
+
+except ValueError:
+    print("\nError: Debes ingresar números válidos.")
