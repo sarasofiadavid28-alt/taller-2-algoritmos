@@ -1,0 +1,32 @@
+# EJERCICIO 3.3 - BÚSQUEDA LINEAL EN LISTA DE NOMBRES
+
+print("\n=== EJERCICIO 7: BÚSQUEDA DE NOMBRES ===\n")
+
+nombres = [
+    "Ana", "Bruno", "Carla", "Daniel", "Elena",
+    "Fabio", "Gabriela", "Hugo", "Inés", "Javier"
+]
+
+# Entrada
+buscado = input("Nombre a buscar: ").strip()
+
+encontrado = False
+posicion = -1
+
+# Proceso
+for i in range(len(nombres)):
+    if nombres[i].lower() == buscado.lower():
+        encontrado = True
+        posicion = i
+        break
+
+# Salida
+print("\n" + "=" * 50)
+
+if encontrado:
+    print(f"Nombre encontrado: {nombres[posicion]}")
+    print(f"Posición en la lista: {posicion}")
+else:
+    print(f"El nombre '{buscado}' no se encuentra en la lista.")
+
+print("=" * 50)
