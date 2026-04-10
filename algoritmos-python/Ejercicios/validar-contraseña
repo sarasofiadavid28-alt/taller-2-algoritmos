@@ -1,0 +1,52 @@
+# EJERCICIO 4 - VALIDADOR DE CONTRASEÑA SEGURA
+
+print("\n=== EJERCICIO 4: VALIDACIÓN DE CONTRASEÑA ===\n")
+
+print("Criterios de contraseña segura:")
+print("- Mínimo 8 caracteres")
+print("- Al menos 1 letra mayúscula")
+print("- Al menos 1 número")
+print("- Al menos 1 carácter especial (!@#$%^&*)")
+
+# Entrada
+contrasena = input("\nIngresa tu contraseña: ").strip()
+
+# Validaciones
+longitud_ok = len(contrasena) >= 8
+tiene_mayus = False
+tiene_numero = False
+tiene_especial = False
+
+caracteres_especiales = "!@#$%^&*"
+
+for caracter in contrasena:
+    if caracter.isupper():
+        tiene_mayus = True
+    if caracter.isdigit():
+        tiene_numero = True
+    if caracter in caracteres_especiales:
+        tiene_especial = True
+
+# Evaluación
+errores = []
+
+if not longitud_ok:
+    errores.append("Debe tener al menos 8 caracteres")
+if not tiene_mayus:
+    errores.append("Falta al menos una letra mayúscula")
+if not tiene_numero:
+    errores.append("Falta al menos un número")
+if not tiene_especial:
+    errores.append("Falta al menos un carácter especial")
+
+# Salida
+print("\n" + "=" * 50)
+
+if not errores:
+    print("Contraseña válida y segura")
+else:
+    print("La contraseña no cumple con los requisitos:")
+    for error in errores:
+        print(f"- {error}")
+
+print("=" * 50)
