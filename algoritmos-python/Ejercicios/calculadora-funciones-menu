@@ -1,0 +1,62 @@
+# EJERCICIO 5.3 - CALCULADORA CON FUNCIONES Y MENÚ
+
+print("\n=== EJERCICIO 5.3: CALCULADORA ===")
+
+def sumar(a, b):
+    return a + b
+
+def restar(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return None
+    return a / b
+
+
+while True:
+    print("\n" + "=" * 40)
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
+    print("=" * 40)
+
+    opcion = input("Seleccione una opción: ").strip()
+
+    if opcion == "5":
+        print("\nFin del programa.")
+        break
+
+    if opcion not in ["1", "2", "3", "4"]:
+        print("Error: Opción inválida.")
+        continue
+
+    try:
+        a = float(input("Ingrese el primer número: "))
+        b = float(input("Ingrese el segundo número: "))
+
+        if opcion == "1":
+            resultado = sumar(a, b)
+        elif opcion == "2":
+            resultado = restar(a, b)
+        elif opcion == "3":
+            resultado = multiplicar(a, b)
+        elif opcion == "4":
+            resultado = dividir(a, b)
+
+        print("\n" + "-" * 40)
+
+        if resultado is None:
+            print("Error: No se puede dividir entre cero.")
+        else:
+            print(f"Resultado: {resultado:.2f}")
+
+        print("-" * 40)
+
+    except ValueError:
+        print("Error: Debes ingresar números válidos.")
