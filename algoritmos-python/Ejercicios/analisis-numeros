@@ -1,0 +1,39 @@
+# EJERCICIO 4.4 - ANÁLISIS DE NÚMEROS DESDE TEXTO
+
+print("\n=== EJERCICIO 8: ANÁLISIS DE NÚMEROS ===\n")
+
+entrada = input("Ingrese números separados por comas: ")
+
+numeros = []
+errores = []
+
+# Proceso
+for i, n in enumerate(entrada.split(",")):
+    try:
+        numero = float(n.strip())
+        numeros.append(numero)
+    except ValueError:
+        errores.append(f"Posición {i+1}: '{n}' no es válido")
+
+# Mostrar errores
+if errores:
+    print("\nSe encontraron errores:")
+    for e in errores:
+        print(f"- {e}")
+
+# Resultados
+if numeros:
+    maximo = max(numeros)
+    minimo = min(numeros)
+    suma = sum(numeros)
+    promedio = suma / len(numeros)
+
+    print("\n" + "=" * 50)
+    print(f"Cantidad de números: {len(numeros)}")
+    print(f"Máximo   : {maximo}")
+    print(f"Mínimo   : {minimo}")
+    print(f"Suma     : {suma}")
+    print(f"Promedio : {promedio:.2f}")
+    print("=" * 50)
+else:
+    print("\nError: No se ingresaron números válidos.")
