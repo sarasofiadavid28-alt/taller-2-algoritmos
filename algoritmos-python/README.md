@@ -1,79 +1,88 @@
+Enunciados del Taller
+SECCIÓN 1: Manejo de Variables y Entrada de Datos
+Ejercicio 1.1 – Registro de usuario
+Solicitar: nombre, edad y ciudad. Mostrar:
 
-Python Ejercicios
+“Hola [nombre], tienes [edad] años y vives en [ciudad].”
+Validar que la edad sea un número positivo.
 
-Este repositorio contiene una colección de ejercicios desarrollados en Python, enfocados en el aprendizaje progresivo de los conceptos fundamentales de programación. Los ejercicios están organizados por secciones, comenzando con temas básicos y avanzando hasta la construcción de un sistema completo.
+Ejercicio 1.2 – Calculadora básica
+Pedir dos números y una operación (+, -, *, /). Mostrar el resultado y validar división por cero.
 
-Descripción general
+Ejercicio 1.3 – Validación de correo electrónico
+Verificar que el correo contenga “@” y “.” en posiciones válidas.
 
-El proyecto está diseñado para fortalecer habilidades en lógica de programación mediante la práctica constante. A lo largo de los ejercicios se abordan estructuras fundamentales como entrada de datos, condicionales, ciclos, estructuras de datos y funciones.
+Ejercicio 1.4 – Validador de contraseña segura
+Validar: mínimo 8 caracteres, una mayúscula, un número y un carácter especial (!@#$%^&*). Indicar qué criterios no se cumplen.
 
-Contenido del proyecto
-1. Variables y entrada de datos
+Ejercicio 1.5 – Convertidor de unidades con menú
+Menú: 1) Celsius→Fahrenheit, 2) Kilómetros→Millas, 3) Kilogramos→Libras. Mostrar con dos decimales.
 
-En esta sección se desarrollan programas básicos que interactúan con el usuario. Incluye ejercicios como:
+SECCIÓN 2: Implementación de Condicionales
+Ejercicio 2.1 – Clasificación de edades
+Clasificar en: niño (0–12), adolescente (13–17), adulto (18–64), adulto mayor (65+).
 
-Registro de usuario (nombre, edad y ciudad)
-Calculadora básica
-Validación de correo electrónico
-Verificador de contraseñas seguras
-Convertidor de unidades con menú interactivo
-2. Estructuras condicionales
+Ejercicio 2.2 – Menú de opciones básico
+Menú: 1) Saludar, 2) Despedirse, 3) Salir. Usar if-elif-else.
 
-Se implementan decisiones lógicas mediante if, elif y else. Algunos ejemplos son:
+Ejercicio 2.3 – Calculadora con menú mejorado
+Permitir múltiples operaciones sin salir del programa. Incluye 4 operaciones y opción de salir.
 
-Clasificación de edad por rangos
-Menú interactivo con múltiples opciones
-Calculadora con selección de operación
-Conversión de notas numéricas a letras
-Simulación de descuentos según tipo de cliente
-3. Ciclos (for y while)
+Ejercicio 2.4 – Sistema de calificaciones con letras
+Convertir nota (0–100) a letra: A (90–100), B (80–89), C (70–79), D (60–69), F (0–59). Validar rango.
 
-Se utilizan estructuras repetitivas para automatizar procesos. Incluye:
+Ejercicio 2.5 – Simulador de descuentos por categoría
+Categoría A=20%, B=15%, C=10% (otras: sin descuento). Mostrar total a pagar y ahorro.
 
-Generación de números pares
-Suma acumulativa hasta un valor de salida
-Búsqueda de elementos en listas
-Tablas de multiplicar
-Eliminación de elementos repetidos
-4. Listas y diccionarios
+✅ SECCIÓN 3: Uso de Ciclos for y while
+Ejercicio 3.1 – Generador de números pares
+Pedir N y mostrar pares desde 1 hasta N con for.
 
-Se trabaja con estructuras de datos para almacenar y manipular información:
+Ejercicio 3.2 – Acumulador numérico
+Sumar números hasta que el usuario ingrese 0, luego mostrar la suma total.
 
-Lista de compras (agregar y eliminar productos)
-Directorio de contactos
-Gestión básica de inventario
-Análisis de datos (máximo, mínimo, suma y promedio)
-Comparación entre listas
-5. Funciones
+Ejercicio 3.3 – Búsqueda en lista de nombres
+Buscar un nombre en una lista y mostrar si existe y su posición.
 
-Se introduce la modularización del código mediante funciones:
+Ejercicio 3.4 – Tabla de multiplicar interactiva
+Generar tabla del 1 al 10 y preguntar si desea otra. Repetir hasta salir.
 
-Generación de saludos según la hora
-Cálculo de promedios
-Calculadora modular
-Verificación de palíndromos
-Cálculo de factorial mediante recursividad
-6. Proyecto final
+Ejercicio 3.5 – Eliminador de duplicados en lista
+Ingresar 10 números y mostrar lista sin duplicados usando ciclos y lista auxiliar (sin conjuntos).
 
-El proyecto culmina con un sistema completo:
+✅ SECCIÓN 4: Gestión de Listas y Diccionarios
+Ejercicio 4.1 – Lista de compras
+Agregar, eliminar y mostrar productos usando una lista.
 
-Sistema de gestión de biblioteca
+Ejercicio 4.2 – Directorio de contactos
+Diccionario: nombre → teléfono. Permitir agregar, buscar y eliminar.
 
-Este sistema permite:
+Ejercicio 4.3 – Gestor de inventario
+Lista de diccionarios con nombre, precio, stock. Actualizar precio buscando por nombre.
 
-Registrar libros
-Listar y buscar libros por título o autor
-Prestar y devolver libros
-Eliminar registros
-Mostrar estadísticas
-Guardar y cargar información desde archivos
-Objetivo
+Ejercicio 4.4 – Analizador estadístico
+Ingresar números separados por comas y calcular: máximo, mínimo, promedio y suma.
 
-El objetivo de este repositorio es desarrollar habilidades en programación mediante la práctica estructurada, permitiendo al estudiante comprender y aplicar los fundamentos de Python en diferentes contextos.
+Ejercicio 4.5 – Comparador avanzado de listas
+Ingresar dos listas y mostrar: comunes, únicos de la primera y únicos de la segunda (sin conjuntos).
 
-Requisitos
-Python 3.x
-Editor de código (Visual Studio Code recomendado)
+✅ SECCIÓN 5: Creación y Uso de Funciones
+Ejercicio 5.1 – Generador de saludos personalizados
+Función saludar(nombre, hora) con saludo según hora: días (5–12), tardes (13–19), noches (20–4).
 
-Autor
+Ejercicio 5.2 – Calculadora de promedios
+Función calcular_promedio(lista) que retorne el promedio. Validar lista vacía.
+
+Ejercicio 5.3 – Refactorización de menú de calculadora
+Separar cada operación en una función y que el menú las invoque según opción.
+
+Ejercicio 5.4 – Detector de palíndromos
+Función es_palindromo(texto) que ignore espacios, mayúsculas/minúsculas y signos de puntuación.
+
+Ejercicio 5.5 – Factorial recursivo
+Función recursiva factorial(n) con validación para números negativos.
+
+Archivo Python ejecutable con el nombre biblioteca.py.
+Código completo con comentarios explicativos en cada función.
+Autora
 Sara Sofia David David
